@@ -80,7 +80,7 @@ public class ListaCircular<T> {
             strRetorno += "[No{Conteudo="+noAuxiliar.getConteudo()+"}]---->";
             noAuxiliar=noAuxiliar.getNoProximo();
         }
-        strRetorno += this.size()!= 0 ? "(Retorna ao inicio)" :"null";
+        strRetorno += this.size()!= 0 ? "(Retorna ao inicio)":"[]";
         return strRetorno;
     }
 }

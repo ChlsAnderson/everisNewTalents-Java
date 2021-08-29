@@ -19,7 +19,7 @@ public class ArvoreBinaria<T extends Comparable<T>> {
         }else if(novoNo.getConteudo().compareTo(atual.getConteudo()) < 0){
             atual.setNoEsq(inserir(atual.getNoEsq(), novoNo));
         }else{
-            atual.setNoEsq(inserir(atual.getNoDir(), novoNo));
+            atual.setNoDir(inserir(atual.getNoDir(), novoNo));
         }
         return atual;
     }
@@ -32,34 +32,34 @@ public class ArvoreBinaria<T extends Comparable<T>> {
     private void exibirInOrdem(BinNo<T> atual){
         if(atual != null){
             exibirInOrdem(atual.getNoEsq());
-            System.out.println(atual.getConteudo()+", ");
+            System.out.print(atual.getConteudo()+", ");
             exibirInOrdem(atual.getNoDir());
         }
     }
 
     public void exibirPosOrdem(){
         System.out.println("\n Exibindo PosOrdem");
-        exibirInOrdem(this.raiz);
+        exibirPosOrdem(this.raiz);
     }
 
     private void exibirPosOrdem(BinNo<T> atual){
         if(atual != null){
-            exibirInOrdem(atual.getNoEsq());
-            exibirInOrdem(atual.getNoDir());
-            System.out.println(atual.getConteudo()+", ");
+            exibirPosOrdem(atual.getNoEsq());
+            exibirPosOrdem(atual.getNoDir());
+            System.out.print(atual.getConteudo()+", ");
         }
     }
 
     public void exibirPreOrdem(){
         System.out.println("\n Exibindo PreOrdem");
-        exibirInOrdem(this.raiz);
+        exibirPreOrdem(this.raiz);
     }
 
     private void exibirPreOrdem(BinNo<T> atual){
         if(atual != null){
-            System.out.println(atual.getConteudo()+", ");
-            exibirInOrdem(atual.getNoEsq());
-            exibirInOrdem(atual.getNoDir());
+            System.out.print(atual.getConteudo()+", ");
+            exibirPreOrdem(atual.getNoEsq());
+            exibirPreOrdem(atual.getNoDir());
         }
     }
 
@@ -116,7 +116,7 @@ public class ArvoreBinaria<T extends Comparable<T>> {
                 }
             }else{
                 for(
-                    temp =atual,filho-atual.getNoEsq();
+                    temp =atual,filho=atual.getNoEsq();
                     filho.getNoDir()!=null;
                     temp=filho,filho=filho.getNoDir()
                 ){
@@ -131,10 +131,7 @@ public class ArvoreBinaria<T extends Comparable<T>> {
                         pai.setNoDir(filho);
                     }
                 }
-
             }
-
-
         }catch(NullPointerException erro){
             System.out.println("Conteudo nao encontrado. Bloco Catch");
         }

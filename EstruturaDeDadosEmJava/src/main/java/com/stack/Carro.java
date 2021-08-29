@@ -1,4 +1,4 @@
-package com.stack.equalshashcode;
+package com.stack;
 
 import java.util.Objects;
 

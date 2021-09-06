@@ -51,4 +51,26 @@ Exemplos de Saída
 1
 
 Escola de Inverno da Maratona - Erechim RS - 2015
+
+Resultado diferente do enunciado
+Teste #5
+
+Dado de entrada:
+1
+0
+Saída esperada:
+1
+Sua Saída:
+1
+Mensagem:
+Teste #6
+
+Dado de entrada:
+3
+8 0 7
+Saída esperada:
+2
+Sua Saída:
+2
+Mensagem:
 */

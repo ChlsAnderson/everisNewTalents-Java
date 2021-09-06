@@ -16,6 +16,7 @@ public class RespostaDeTheon {
             }
         }
           System.out.println(posMenor);
+          leitor.close();
     }
 	
 }

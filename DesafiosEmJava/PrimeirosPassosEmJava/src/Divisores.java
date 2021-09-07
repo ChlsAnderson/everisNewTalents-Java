@@ -6,10 +6,11 @@ public class Divisores {
         Scanner input = new Scanner(System.in);
         int n;
         n = input.nextInt();
+        
 
         for (int i = 1;  i<n        ; i++) {
             if (n % i == 0) {
-                System.out.println( (n/i)      );
+                System.out.println( (i+n/n-1)      );
             }
         }
         System.out.println(  n      );

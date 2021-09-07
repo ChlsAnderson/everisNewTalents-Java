@@ -23,7 +23,7 @@ public class AreaDireita {
                 }
             }
 
-            if ("O" == "M") {
+            if (O == 'M') {
                 soma /= 30;
             }
             System.out.println(String.format("%.1f", soma));

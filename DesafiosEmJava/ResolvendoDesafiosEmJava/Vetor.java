@@ -1,21 +1,31 @@
 import java.io.IOException;
 import java.util.Scanner;
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.util.Locale;
 
-public class Vetor{
-	
-    public static void main(String[] args) throws IOException {
-        Scanner leitor = new Scanner(System.in);
-        double X = leitor.nextDouble();
-        double[] N = new double[100];
-        N[0] = X;
-        for (                                       ) {
-        	
-        }
-        for (                              ) {
-        	System.out.println(String.format("N[" + i + "] = %.4f", N[i]));
-        }
+public class Vetor {
+  public static void main(String[] args) throws IOException {
+    Locale.setDefault(Locale.US);
+    Scanner leitor = new Scanner(System.in);
+    double X = 0;
+    
+    X = leitor.nextDouble();
+    BigDecimal[] N = new BigDecimal[100];
+    N[0] = new BigDecimal(X);
+
+    for (int i = 1; i < 100; ++i) {
+      N[i] = N[i - 1].divide(new BigDecimal(2));
     }
-	
+
+    leitor.close();
+    DecimalFormat decFormat = new DecimalFormat("0.0000");
+
+    for (int i = 0; i < 100; ++i) {
+      System.out.println("N[" + i + "] = " + decFormat.format(N[i]));
+    }
+    leitor.close();
+  }
 }
 
 /* 

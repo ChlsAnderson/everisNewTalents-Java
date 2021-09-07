@@ -27,6 +27,7 @@ public class AreaDireita {
                 soma /= 30;
             }
             System.out.println(String.format("%.1f", soma));
+            leitor.close();
     }
 	
 }
